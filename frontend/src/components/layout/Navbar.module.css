@@ -1,0 +1,62 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1890ff;
+}
+
+.logoText {
+    color: #1890ff;
+}
+
+
+
+.menu {
+    display: flex;
+    gap: 20px;
+    color: #555;
+    font-size: 14px;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menuItem:hover {
+    color: #1890ff;
+}
+
+.icons {
+    display: flex;
+    gap: 12px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.icon:hover {
+    color: #1890ff;
+}
+
+.icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}

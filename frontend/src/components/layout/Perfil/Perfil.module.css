@@ -1,0 +1,22 @@
+.container_perfil, form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input{
+    display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background: #4285f4;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }

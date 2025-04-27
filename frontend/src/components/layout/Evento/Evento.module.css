@@ -1,0 +1,19 @@
+.conteiner_evento,
+.infor,
+.descricao{
+    display: flex;
+    align-items: center;
+    margin-top: 3em;
+}
+.conteiner_evento{
+    flex-direction: column;
+}
+.infor{
+    justify-content: space-between;
+}
+.descricao span{
+    max-width: 70%;
+}
+.description p{
+    max-width: 80%;
+}
