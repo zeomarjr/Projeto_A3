@@ -2,61 +2,75 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: white;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    font-family: sans-serif;
-}
-
-.logo {
+    padding: 14px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    font-family: 'Segoe UI', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
     display: flex;
     align-items: center;
-    font-size: 22px;
+  }
+  
+  .logoText {
+    font-size: 24px;
     font-weight: bold;
-    color: #1890ff;
-}
-
-.logoText {
-    color: #1890ff;
-}
-
-
-
-.menu {
+    color: #2e7d32;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .menu {
     display: flex;
-    gap: 20px;
-    color: #555;
-    font-size: 14px;
-}
-
-.menuItem {
+    gap: 28px;
+    align-items: center;
+  }
+  
+  .menuItem {
     display: flex;
     align-items: center;
-    gap: 6px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.menuItem:hover {
-    color: #1890ff;
-}
-
-.icons {
+    gap: 8px;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .menuItem:hover {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .menuItem a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .menuItem a:hover {
+    text-decoration: underline;
+  }
+  
+  .icons {
     display: flex;
-    gap: 12px;
-}
-
-.icon {
-    font-size: 1.5rem;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .icon {
+    font-size: 1.7rem;
+    color: #2e7d32;
     cursor: pointer;
-}
-
-
-.icon:hover {
-    color: #1890ff;
-}
-
-.icon {
-    font-size: 1.5rem;
-    cursor: pointer;
-}
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .icon:hover {
+    color: #1b5e20;
+    transform: scale(1.1);
+  }
+  

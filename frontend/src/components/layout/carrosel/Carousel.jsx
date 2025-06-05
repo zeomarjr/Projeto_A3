@@ -1,48 +1,43 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import IMG from '../../img/image.png';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-import './Carrosel.module.css'; 
+import React, { useEffect, useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./Carrosel.module.css";
+import api from "../../../util/conn";
+
 function Carrosel() {
+  const [eventos, setEventos] = useState([]);
+
+  useEffect(() => {
+    const fetchEventos = async () => {
+      try {
+        const response = await api.get("/eventos/allEventos");
+        setEventos(response.data.message);
+      } catch (error) {
+        console.error("Erro ao buscar eventos:", error);
+      }
+    };
+
+    fetchEventos();
+  }, []);
+
   return (
-    <Carousel className='mt-5 mb-5 '>
-      <Carousel.Item>
-        <img
-          className="d-block w-10"
-          src={IMG}
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-
-      <Carousel.Item>
-        <img
-          className="d-block w-10"
-          src={IMG}
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-
-      <Carousel.Item>
-        <img
-          className="d-block w-10"
-          src={IMG}
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
+    <Carousel
+      className={`mt-5 mb-5 ${styles.carouselContainer}`}
+      interval={3000}
+    >
+      {eventos.map((evento, i) => (
+        <Carousel.Item key={evento.id}>
+          <img
+            className={`d-block w-100 ${styles.carouselImage}`}
+            src={`http://localhost:3001${evento.imagem}`}
+            alt={`Slide ${i + 1}`}
+          />
+          <Carousel.Caption className={styles.carouselCaption}>
+            <h3>{evento.Titulo}</h3>
+            <p>{new Date(evento.Data).toLocaleDateString()}</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      ))}
     </Carousel>
   );
 }

@@ -3,7 +3,7 @@ import styles from "./Navbar.module.css";
 import {
   FaPlusCircle,
   FaCalendarAlt,
-  FaHome ,
+  FaHome,
   FaBars,
   FaUserCircle,
 } from "react-icons/fa";
@@ -17,9 +17,9 @@ const Navbar = () => {
   const [showLogin, setShowLogin] = useState(false);
 
   const handleLogout = () => {
-    sair()
+    sair();
   };
-  
+
   return (
     <>
       <nav className={styles.navbar}>
@@ -28,17 +28,20 @@ const Navbar = () => {
         </div>
         {authenticated ? (
           <div className={styles.menu}>
-             <div className={styles.menuItem}>
-              <FaHome   /> <Link to= '/'>Home</Link>
+            <div className={styles.menuItem}>
+              <FaHome /> <Link to="/">Home</Link>
             </div>
             <div className={styles.menuItem}>
-              <FaPlusCircle /> <Link to= '/CriarEventos'>Criar evento</Link>
+              <FaPlusCircle /> <Link to="/CriarEventos">Criar evento</Link>
             </div>
             <div className={styles.menuItem}>
-              <FaCalendarAlt /> <Link to= '/MyEventos' >Meus eventos</Link>
+              <FaCalendarAlt /> <Link to="/MyEventos">Meus eventos</Link>
             </div>
             <div className={styles.menuItem}>
-              <FaUserCircle /> <Link to= '/Perfil'>Perfil</Link>
+              <FaCalendarAlt /> <Link to="/MeusIngressos">Meus Ingressos</Link>
+            </div>
+            <div className={styles.menuItem}>
+              <FaUserCircle /> <Link to="/Perfil">Perfil</Link>
             </div>
             <div className={styles.menuItem} onClick={handleLogout}>
               <FaBars /> <span>Sair</span>
@@ -48,7 +51,7 @@ const Navbar = () => {
           <div className={styles.icons}>
             <FaUserCircle
               className={styles.icon}
-              onClick={() => setShowLogin(true)} 
+              onClick={() => setShowLogin(true)}
             />
           </div>
         )}

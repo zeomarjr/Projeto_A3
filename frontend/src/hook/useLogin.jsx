@@ -23,6 +23,7 @@ export default function useAuth() {
   const criarUsuario = async (dados) => {
     try {
       const res = await api.post("users/criar", dados);
+      console.log(dados)
       autheticar(res.data);
     } catch (error) {
       console.log(error);

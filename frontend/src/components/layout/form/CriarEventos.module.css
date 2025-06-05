@@ -1,0 +1,236 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="file"],
+textarea {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+button {
+  padding: 14px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.preview {
+  text-align: center;
+}
+
+.preview img {
+  margin-top: 10px;
+  max-width: 280px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.row.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.formBox h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="file"],
+textarea {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+button {
+  padding: 14px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.preview {
+  text-align: center;
+}
+
+.preview img {
+  margin-top: 10px;
+  max-width: 280px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.rowColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rowColumn label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 🔥 Campo CEP */
+.cepInput {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.cepInput:focus {
+  outline: none;
+  border-color: #4caf50;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.cepButton {
+  margin-top: 8px;
+  width: fit-content;
+  padding: 12px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cepButton:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+}
+
+.cepButton:active {
+  transform: translateY(0);
+}
+
+.endereco {
+  margin-top: 8px;
+  background-color: #f0fff3;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #cceedd;
+  color: #2c3e50;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.row label {
+  flex: 1;
+  min-width: 220px;
+}
